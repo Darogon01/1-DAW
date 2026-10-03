@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M2 · Barra de navegación</title>
+<style>
+/* Base de las capturas: solo cambia la fuente; todo lo demás son los estilos por defecto del navegador */
+html { background: #ffffff; color: #111111; }
+body { margin: 16px; font-family: "Liberation Sans", Arial, sans-serif; }
+
+</style>
+<style>
+body { margin: 0; }
+.cabecera {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;
+  padding: 12px 16px; background: #fff; border-bottom: 1px solid #d1d9e0;
+}
+.cabecera__logo img { display: block; height: 32px; width: auto; }
+.cabecera__acceso {
+  margin-left: auto; padding: 6px 14px; border-radius: 999px;
+  background: #0d1117; color: #fff; text-decoration: none; font-weight: bold;
+}
+.menu { order: 3; width: 100%; overflow-x: auto; }          /* móvil: en otra línea, ancho completo */
+.menu__lista { display: flex; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.menu__enlace {
+  display: block; padding: 6px 12px; border-radius: 6px;
+  color: #1f2328; text-decoration: none; white-space: nowrap;
+}
+.menu__enlace:hover { background: #f1f3f5; }
+.menu__enlace[aria-current="page"] { background: #fff3e6; color: #c25e00; font-weight: bold; }
+
+@media (width >= 640px) {
+  .menu { order: 0; width: auto; }                           /* escritorio: en la misma fila */
+}
+</style>
+</head>
+<body>
+<header class="cabecera">
+  <a class="cabecera__logo" href="#"><img src="../recursos/logo.svg" alt="Tienda DAW, ir al inicio" width="160" height="40"></a>
+  <nav class="menu" aria-label="Principal">
+    <ul class="menu__lista" role="list">
+      <li><a class="menu__enlace" href="#" aria-current="page">Inicio</a></li>
+      <li><a class="menu__enlace" href="#">Teclados</a></li>
+      <li><a class="menu__enlace" href="#">Audio</a></li>
+      <li><a class="menu__enlace" href="#">Ofertas</a></li>
+    </ul>
+  </nav>
+  <a class="cabecera__acceso" href="#">Entrar</a>
+</header>
+</body>
+</html>

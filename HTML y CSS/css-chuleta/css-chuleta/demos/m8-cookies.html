@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M8 · Banner de cookies</title>
+<style>
+/* Base de las capturas: solo cambia la fuente; todo lo demás son los estilos por defecto del navegador */
+html { background: #ffffff; color: #111111; }
+body { margin: 16px; font-family: "Liberation Sans", Arial, sans-serif; }
+
+</style>
+<style>
+.contenido img { max-width: 100%; height: auto; display: block; }
+.cookies {
+  position: fixed; inset: auto 12px 12px 12px;          /* abajo, con 12 px de margen a los lados */
+  z-index: 400;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;
+  padding: 14px 16px; border-radius: 12px; color: #fff;
+  background: rgb(13 17 23 / 75%);
+  backdrop-filter: blur(8px);                            /* desenfoca lo que hay detrás */
+  box-shadow: 0 8px 24px rgb(0 0 0 / 30%);
+}
+.cookies__titulo { margin: 0; font-size: 1rem; width: 100%; }
+.cookies__texto { margin: 0; flex: 1 1 260px; font-size: 0.9rem; }
+.cookies__texto a { color: #ffb366; }
+.cookies__acciones { display: flex; gap: 8px; }
+.cookies__boton {
+  padding: 8px 16px; border-radius: 6px; font: inherit; font-weight: bold; cursor: pointer;
+  background: #fff; color: #0d1117; border: 0;            /* los dos botones iguales */
+}
+</style>
+</head>
+<body>
+<main class="contenido">
+  <h1>Ofertas de la semana</h1>
+  <p>Contenido de la página que queda por detrás del aviso de cookies…</p>
+  <img src="../recursos/paisaje.svg" alt="" width="600" height="300">
+</main>
+<section class="cookies" aria-labelledby="cookies-titulo">
+  <h2 class="cookies__titulo" id="cookies-titulo">Usamos cookies</h2>
+  <p class="cookies__texto">Para analizar el tráfico y recordar tus preferencias. <a href="#">Más información</a></p>
+  <div class="cookies__acciones">
+    <button class="cookies__boton" type="button">Rechazar</button>
+    <button class="cookies__boton" type="button">Aceptar</button>
+  </div>
+</section>
+</body>
+</html>

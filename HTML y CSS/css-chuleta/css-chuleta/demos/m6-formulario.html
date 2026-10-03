@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M6 · Formulario con estados</title>
+<style>
+/* Base de las capturas: solo cambia la fuente; todo lo demás son los estilos por defecto del navegador */
+html { background: #ffffff; color: #111111; }
+body { margin: 16px; font-family: "Liberation Sans", Arial, sans-serif; }
+
+</style>
+<style>
+.formulario { display: grid; gap: 12px; max-width: 300px; padding: 4px; }
+.campo { display: grid; gap: 4px; }
+.campo__etiqueta { font-weight: bold; }
+.campo__control {
+  padding: 10px 12px; border: 2px solid #d1d9e0; border-radius: 6px; font: inherit;
+  transition: border-color 150ms, box-shadow 150ms;
+}
+.campo__control:focus-visible { outline: none; border-color: #1f6feb; box-shadow: 0 0 0 4px rgb(31 111 235 / 25%); }
+.campo__control:user-invalid { border-color: #d1242f; background: #fff5f5; }
+.campo__control:user-valid   { border-color: #1a7f37; }
+.campo__error { display: none; margin: 0; color: #d1242f; font-size: 0.875rem; }
+.campo:has(.campo__control:user-invalid) .campo__error { display: block; }   /* el mensaje aparece solo */
+.formulario__boton { padding: 10px; border: 0; border-radius: 6px; background: #ff8a1f; font: inherit; font-weight: bold; }
+</style>
+</head>
+<body>
+<form class="formulario" action="#" novalidate>
+  <div class="campo">
+    <label class="campo__etiqueta" for="email">Email</label>
+    <input class="campo__control" id="email" name="email" type="email" required placeholder="tu@correo.com" aria-describedby="email-error">
+    <p class="campo__error" id="email-error">Escribe un email válido, por ejemplo ana@correo.com</p>
+  </div>
+  <button class="formulario__boton" type="submit">Suscribirme</button>
+</form>
+</body>
+</html>

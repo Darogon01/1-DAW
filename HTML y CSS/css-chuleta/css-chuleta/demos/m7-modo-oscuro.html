@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M7 · Modo oscuro sin JS</title>
+<style>
+/* Base de las capturas: solo cambia la fuente; todo lo demás son los estilos por defecto del navegador */
+html { background: #ffffff; color: #111111; }
+body { margin: 16px; font-family: "Liberation Sans", Arial, sans-serif; }
+
+</style>
+<style>
+:root {
+  --fondo: #ffffff; --superficie: #f6f8fa; --texto: #1f2328; --borde: #d1d9e0; --enlace: #0969da;
+}
+:root:has(#modo:checked) {                      /* si el interruptor está marcado, cambian las variables */
+  --fondo: #0d1117; --superficie: #161b22; --texto: #e6edf3; --borde: #30363d; --enlace: #ff8a1f;
+  color-scheme: dark;
+}
+body { margin: 0; padding: 16px; background: var(--fondo); color: var(--texto); transition: background 200ms, color 200ms; }
+a { color: var(--enlace); }
+.aviso { margin-top: 16px; padding: 16px; background: var(--superficie); border: 1px solid var(--borde); border-radius: 8px; }
+.aviso__titulo { margin: 0 0 4px; font-size: 1.1rem; }
+.interruptor { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-weight: bold; }
+.interruptor__control { position: absolute; opacity: 0; }        /* oculto pero accesible con teclado */
+.interruptor__pista { width: 44px; height: 24px; border-radius: 999px; background: #d1d9e0; position: relative; transition: background 200ms; }
+.interruptor__pista::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%;
+  background: #fff; transition: translate 200ms;
+}
+.interruptor__control:checked + .interruptor__pista { background: #ff8a1f; }
+.interruptor__control:checked + .interruptor__pista::after { translate: 20px 0; }
+.interruptor__control:focus-visible + .interruptor__pista { outline: 3px solid #1f6feb; outline-offset: 2px; }
+</style>
+</head>
+<body>
+<label class="interruptor">
+  <input class="interruptor__control" type="checkbox" id="modo" role="switch">
+  <span class="interruptor__pista" aria-hidden="true"></span>
+  Modo oscuro
+</label>
+<article class="aviso">
+  <h2 class="aviso__titulo">Pedido enviado</h2>
+  <p>Tu pedido #1024 llegará mañana.</p>
+  <a href="#">Seguir el envío</a>
+</article>
+</body>
+</html>

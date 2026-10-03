@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M3 · Maquetación con grid-template-areas</title>
+<style>
+/* Base de las capturas: solo cambia la fuente; todo lo demás son los estilos por defecto del navegador */
+html { background: #ffffff; color: #111111; }
+body { margin: 16px; font-family: "Liberation Sans", Arial, sans-serif; }
+
+</style>
+<style>
+body { margin: 0; }
+.pagina {
+  display: grid; gap: 8px; padding: 8px; min-height: 360px;
+  grid-template-areas:
+    "cabecera"
+    "contenido"
+    "lateral"
+    "pie";
+  grid-template-rows: auto 1fr auto auto;
+}
+.pagina__cabecera  { grid-area: cabecera; }
+.pagina__contenido { grid-area: contenido; }
+.pagina__lateral   { grid-area: lateral; }
+.pagina__pie       { grid-area: pie; }
+.pagina > * { padding: 16px; border: 2px solid #ff8a1f; background: #fff3e6; font-family: monospace; }
+
+@media (width >= 640px) {
+  .pagina {
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      "cabecera  cabecera"
+      "contenido lateral"
+      "pie       pie";
+    grid-template-rows: auto 1fr auto;
+  }
+}
+</style>
+</head>
+<body>
+<div class="pagina">
+  <header class="pagina__cabecera">Cabecera</header>
+  <main class="pagina__contenido">Contenido principal</main>
+  <aside class="pagina__lateral">Barra lateral</aside>
+  <footer class="pagina__pie">Pie</footer>
+</div>
+</body>
+</html>

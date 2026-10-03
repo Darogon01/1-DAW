@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M5 · Tabla de precios</title>
+<style>
+/* Base de las capturas: solo cambia la fuente; todo lo demás son los estilos por defecto del navegador */
+html { background: #ffffff; color: #111111; }
+body { margin: 16px; font-family: "Liberation Sans", Arial, sans-serif; }
+
+</style>
+<style>
+.planes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px 8px 8px; align-items: stretch; }
+.plan {
+  position: relative; display: grid; grid-row: span 4; grid-template-rows: subgrid; gap: 8px;
+  padding: 20px 16px; border: 1px solid #d1d9e0; border-radius: 12px; background: #fff; text-align: center;
+}
+.plan--destacado { border: 2px solid #ff8a1f; box-shadow: 0 12px 28px rgb(255 138 31 / 25%); scale: 1.04; }
+.plan__insignia {
+  position: absolute; top: 0; left: 50%; translate: -50% -50%;
+  background: #ff8a1f; padding: 2px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: bold; white-space: nowrap;
+}
+.plan__nombre { margin: 0; }
+.plan__precio { margin: 0; font-size: 1.75rem; font-weight: bold; }
+.plan__precio span { font-size: 0.9rem; font-weight: normal; color: #59636e; }
+.plan__lista { margin: 0; padding: 0; list-style: none; line-height: 1.8; }
+.plan__boton { align-self: end; padding: 10px; border-radius: 6px; background: #0d1117; color: #fff; text-decoration: none; font-weight: bold; }
+.plan--destacado .plan__boton { background: #ff8a1f; color: #000; }
+</style>
+</head>
+<body>
+<div class="planes">
+  <article class="plan">
+    <h3 class="plan__nombre">Básico</h3>
+    <p class="plan__precio">6,99 €<span>/mes</span></p>
+    <ul class="plan__lista"><li>HD</li><li>1 pantalla</li></ul>
+    <a class="plan__boton" href="#">Elegir</a>
+  </article>
+  <article class="plan plan--destacado">
+    <span class="plan__insignia">Más popular</span>
+    <h3 class="plan__nombre">Estándar</h3>
+    <p class="plan__precio">12,99 €<span>/mes</span></p>
+    <ul class="plan__lista"><li>Full HD</li><li>2 pantallas</li><li>Descargas</li></ul>
+    <a class="plan__boton" href="#">Elegir</a>
+  </article>
+  <article class="plan">
+    <h3 class="plan__nombre">Premium</h3>
+    <p class="plan__precio">17,99 €<span>/mes</span></p>
+    <ul class="plan__lista"><li>4K + HDR</li><li>4 pantallas</li><li>Descargas</li><li>Audio espacial</li></ul>
+    <a class="plan__boton" href="#">Elegir</a>
+  </article>
+</div>
+</body>
+</html>

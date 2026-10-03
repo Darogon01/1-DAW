@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M4 · Hero</title>
+<style>
+/* Base de las capturas: solo cambia la fuente; todo lo demás son los estilos por defecto del navegador */
+html { background: #ffffff; color: #111111; }
+body { margin: 16px; font-family: "Liberation Sans", Arial, sans-serif; }
+
+</style>
+<style>
+body { margin: 0; }
+.hero {
+  display: grid; align-items: end; min-height: 320px; padding: clamp(16px, 4vw, 48px);
+  color: #fff;
+  background:
+    linear-gradient(to top, rgb(13 17 23 / 90%), rgb(13 17 23 / 20%)),   /* capa oscura para leer el texto */
+    url("recursos/paisaje.svg") center / cover no-repeat;
+}
+.hero__contenido { max-width: 34ch; }
+.hero__titulo { margin: 0 0 8px; font-size: clamp(1.75rem, 1rem + 4vw, 3.25rem); line-height: 1.1; text-wrap: balance; }
+.hero__texto { margin: 0 0 16px; font-size: 1.1rem; }
+.hero__acciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.boton { padding: 10px 18px; border-radius: 6px; font-weight: bold; text-decoration: none; }
+.boton--principal { background: #ff8a1f; color: #000; }
+.boton--secundario { color: #fff; border: 2px solid #fff; }
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero__contenido">
+    <h1 class="hero__titulo">Equipa tu escritorio</h1>
+    <p class="hero__texto">Periféricos seleccionados por desarrolladores, con envío en 24 h.</p>
+    <div class="hero__acciones">
+      <a class="boton boton--principal" href="#">Ver ofertas</a>
+      <a class="boton boton--secundario" href="#">Cómo elegimos</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>

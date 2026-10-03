@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M1 · Tarjeta de producto</title>
+<style>
+/* Base de las capturas: solo cambia la fuente; todo lo demás son los estilos por defecto del navegador */
+html { background: #ffffff; color: #111111; }
+body { margin: 16px; font-family: "Liberation Sans", Arial, sans-serif; }
+
+</style>
+<style>
+:root { --marca: #ff8a1f; --texto: #1f2328; --suave: #59636e; --radio: 10px; }
+.producto {
+  width: 260px; margin: 12px; overflow: hidden;
+  background: #fff; border: 1px solid #d1d9e0; border-radius: var(--radio);
+  transition: translate 200ms ease, box-shadow 200ms ease;
+}
+.producto:hover { translate: 0 -4px; box-shadow: 0 12px 24px rgb(0 0 0 / 15%); }
+.producto__media { position: relative; }
+.producto__imagen { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.producto__insignia {
+  position: absolute; top: 10px; left: 10px; padding: 2px 8px;
+  background: #d1242f; color: #fff; font-weight: bold; font-size: 0.85rem; border-radius: 4px;
+}
+.producto__cuerpo { display: grid; gap: 8px; padding: 12px; }
+.producto__titulo { margin: 0; font-size: 1rem; color: var(--texto); }
+.producto__precio { margin: 0; }
+.producto__precio s { color: var(--suave); font-size: 0.9rem; }
+.producto__precio strong { font-size: 1.25rem; color: #c25e00; }
+.boton {
+  display: block; padding: 10px; text-align: center; font-weight: bold;
+  background: var(--marca); color: #000; text-decoration: none; border-radius: 6px;
+}
+.boton:hover { background: color-mix(in oklch, var(--marca), white 20%); }
+</style>
+</head>
+<body>
+<article class="producto">
+  <div class="producto__media">
+    <img class="producto__imagen" src="../recursos/auriculares.svg" alt="Auriculares Sony WH-1000XM5" width="400" height="300">
+    <span class="producto__insignia">-8 %</span>
+  </div>
+  <div class="producto__cuerpo">
+    <h3 class="producto__titulo">Auriculares Sony WH-1000XM5</h3>
+    <p class="producto__precio"><s>379,00 €</s> <strong>349,00 €</strong></p>
+    <a class="boton" href="#">Añadir al carrito</a>
+  </div>
+</article>
+</body>
+</html>
