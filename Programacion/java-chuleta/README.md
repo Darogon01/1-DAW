@@ -35,7 +35,7 @@
 | `10` | [**ArrayList**](#mod-10) | [Crear](#arraylist-crear) · [Métodos](#arraylist-metodos) · [Recorrer y borrar](#arraylist-recorrer) · [Collections](#collections) · [Array vs ArrayList](#array-vs-arraylist) |
 | `11` | [**Funciones**](#mod-11) | [Anatomía](#funcion-anatomia) · [Parámetros y return](#funcion-parametros) · [Paso por valor](#paso-valor) · [Plantilla de ejercicio](#funcion-plantilla) |
 | `12` | [**Excepciones frecuentes**](#mod-12) | [Tabla](#excepciones) · [try-catch](#try-catch) |
-| `13` | [**Ejercicios: casos reales**](#mod-13) | [E01](#e01) · [E02](#e02) · [E03](#e03) · [E04](#e04) · [E05](#e05) · [E06](#e06) · [E07](#e07) · [E08](#e08) · [E09](#e09) · [E10](#e10) |
+| `13` | [**Misiones**](#mod-13) | [E01](#e01) · [E02](#e02) · [E03](#e03) · [E04](#e04) · [E05](#e05) · [E06](#e06) · [E07](#e07) · [E08](#e08) · [E09](#e09) · [E10](#e10) |
 
 ---
 
@@ -1535,7 +1535,7 @@ while (edad < 0) {
 
 <a id="mod-13"></a>
 
-## `13` EJERCICIOS: CASOS REALES
+## `13` Misiones
 
 ```text
 ┌─[ MOD.13 ]──────────────────────────────────────────────── MISIONES ─┐
